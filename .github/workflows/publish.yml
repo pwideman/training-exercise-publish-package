@@ -2,6 +2,8 @@ name: Publish NPM package
 
 on: workflow_dispatch
 
+defaults:
+  run:
 jobs:
   package:
     runs-on: ubuntu-latest
@@ -9,8 +11,11 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v1
         with:
+          node-version: 20
           registry-url: https://npm.pkg.github.com/
       - run: npm ci
+        working-directory: ./sample-packages/npm
       - run: npm publish
+        working-directory: ./sample-packages/npm
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
