@@ -1,7 +1,7 @@
 name: Grading workflow
 
 on:
-  registry_package:
+  package:
     types: [published]
   workflow_dispatch:
 
