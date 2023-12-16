@@ -1,0 +1,7 @@
+name: Package Published
+on: registry_package
+jobs:
+  published:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "registry_package event"
