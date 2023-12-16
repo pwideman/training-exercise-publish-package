@@ -1,6 +1,6 @@
 {
   "name": "@pwideman/sample-npm-package",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Sample package for GitHub Training",
   "main": "index.js",
   "scripts": {
